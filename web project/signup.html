@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Help Sign Up</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+
+    <div class="background">
+    <form class="box"onclick="return validate()" >
+        <h1> SIGN-UP</h1>
+        <input type="text"  name="" placeholder=" First Name" id="fname">
+        <input type="text" name="" placeholder="Last Name" id="sname">
+        <input type="text" name="" placeholder="User-Name" id="uname">
+        <input type="text" name="" placeholder="Email" id="email">
+        <input type="password" name="" placeholder="Password" id="password">
+        <input type="password" name="" placeholder="Re-Password" id="repassword">
+        <button id="btn" onclick="return validate2()"> <a class="link" href="/home.html"> Sign up </a></button>
+    </form>
+</div>
+
+    <script>
+    function validate2(){
+        var fname= document.getElementById("fname").value;
+        var sname= document.getElementById("sname").value;
+        var uname= document.getElementById("uname").value;
+        var email= document.getElementById("email").value;
+        var password= document.getElementById("paswword").value;
+        
+        if (name==null || name==""){  
+            alert("Name can't be blank");  
+            return false;  
+        }
+            else if(password.value.length <6){  
+                alert("Password must be at least 6 characters.");  
+            }
+            else if(password.value.length >=10){  
+                alert("Password must be less than 10 characters.");  
+            }
+            else if(repassword.value != password.value){
+                alert("Re-Password must be matched to Password");  
+            }
+            else{
+                alert("login succesfully")
+            }
+    }
+    </script> 
+</body>
+</html>
